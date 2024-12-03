@@ -5,13 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class testeSelenium {
+import java.time.Duration;
+
+public class testePreencherFomulario {
 
     @Test
     public void execucaoSelenium() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
-        //Thread.sleep(5000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20000));
         driver.get("https://demo.automationtesting.in/Register.html");
 
         //Campo First Name
@@ -37,8 +39,6 @@ public class testeSelenium {
 
         //Campo Languages - expandir lista
         driver.findElement(By.xpath("//div[@id='msdd']")).click();
-
-        Thread.sleep(2000);
 
         //Campo Languages - selecionar item da lista
         driver.findElement(By.xpath("//a[contains(text(),'Portuguese')]")).click();
@@ -76,7 +76,6 @@ public class testeSelenium {
         //Campo Submit
         driver.findElement(By.xpath("//button[@id='submitbtn']")).click();
 
-        Thread.sleep(10000);
         driver.quit();
 
     }
