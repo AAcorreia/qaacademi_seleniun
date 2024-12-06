@@ -1,5 +1,4 @@
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class testeNovaJanela {
+public class testeWindow {
 
     @Test
     public void testeNovaAba(){
@@ -23,6 +22,6 @@ public class testeNovaJanela {
         String paginaTotal = driver.getPageSource();
         Assert.assertTrue(paginaTotal.contains(textNovaAba));
 
-        driver.quit();
+        //driver.quit();
     }
 }

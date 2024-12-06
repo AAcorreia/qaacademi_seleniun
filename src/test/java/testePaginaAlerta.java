@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class TestePaginaAlerta {
+public class testePaginaAlerta {
 
     WebDriver driver;
 
